@@ -1,0 +1,191 @@
+.checkout-panel {
+    position: sticky;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px 40px;
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto;
+    z-index: 100;
+    display: none;
+}
+
+.checkout-panel-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.checkout-info {
+    flex: 1;
+}
+
+.checkout-total {
+    font-size: 1.3em;
+    color: #333;
+    margin: 0;
+}
+
+.checkout-total strong {
+    color: #ff6600;
+    font-weight: 700;
+}
+
+.checkout-button {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: #ff6600;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.checkout-button:hover {
+    background-color: #e55a00;
+}
+
+.checkout-button.disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.dish-card.selected {
+    border: 2px solid #ff6600;
+    background-color: #fff3e6;
+}
+
+.order-summary {
+    margin-top: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.summary-item p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.summary-item p:first-child {
+    font-weight: 500;
+    color: #333;
+}
+
+.summary-item p:last-child {
+    color: #555;
+    text-align: right;
+}
+
+.summary-total {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.summary-total p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.total-price {
+    font-size: 1.3em !important;
+    font-weight: 700 !important;
+    color: #ff6600 !important;
+}
+
+.empty-order-message {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    padding: 40px 20px;
+    font-style: italic;
+}
+
+.empty-order-message a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.empty-order-message a:hover {
+    color: #e55a00;
+    text-decoration: underline;
+}
+
+.dish-card .remove-btn {
+    background-color: #ff4444;
+    color: white;
+}
+
+.dish-card .remove-btn:hover {
+    background-color: #cc0000;
+}
+
+@media (max-width: 800px) {
+    .checkout-panel {
+        bottom: 10px;
+        padding: 15px 25px;
+    }
+
+    .checkout-panel-content {
+        gap: 20px;
+    }
+
+    .checkout-total {
+        font-size: 1.1em;
+    }
+
+    .checkout-button {
+        padding: 10px 30px;
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 600px) {
+    .checkout-panel {
+        bottom: 0;
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 15px 20px;
+    }
+
+    .checkout-panel-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .checkout-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .summary-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .summary-item p:last-child {
+        text-align: left;
+    }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Burger - Собрать ланч</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/combo.css">
+    <link rel="stylesheet" href="assets/css/checkout.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Drive Burger</h1>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="menu.html" id="active">Собрать ланч</a>
+                <a href="order.html">Оформить заказ</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="combo-section">
+            <h2>Доступные для заказа комбо</h2>
+            <div class="combos-grid">
+                <div class="combo-item">
+                    <div class="combo-dishes">
+                        <div class="combo-dish">
+                            <img src="images/icons/soup.png" alt="Суп">
+                            <p>Суп</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/main-course.png" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/salad.png" alt="Салат">
+                            <p>Салат</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/drink.png" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combo-item">
+                    <div class="combo-dishes">
+                        <div class="combo-dish">
+                            <img src="images/icons/soup.png" alt="Суп">
+                            <p>Суп</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/main-course.png" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/drink.png" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combo-item">
+                    <div class="combo-dishes">
+                        <div class="combo-dish">
+                            <img src="images/icons/soup.png" alt="Суп">
+                            <p>Суп</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/salad.png" alt="Салат">
+                            <p>Салат</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/drink.png" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combo-item">
+                    <div class="combo-dishes">
+                        <div class="combo-dish">
+                            <img src="images/icons/main-course.png" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/salad.png" alt="Салат">
+                            <p>Салат</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/drink.png" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combo-item">
+                    <div class="combo-dishes">
+                        <div class="combo-dish">
+                            <img src="images/icons/main-course.png" alt="Главное блюдо">
+                            <p>Главное блюдо</p>
+                        </div>
+                        <div class="combo-dish">
+                            <img src="images/icons/drink.png" alt="Напиток">
+                            <p>Напиток</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="combo-item">
+                    <div class="combo-dishes">
+                        <div class="combo-dish">
+                            <img src="images/icons/dessert.png" alt="Десерт">
+                            <p>Десерт</p>
+                            <p class="dessert-note">(Можно добавить к любому заказу)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Выберите суп</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-kind="fish">рыбный</button>
+                <button class="filter-btn" data-kind="meat">мясной</button>
+                <button class="filter-btn" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes-grid"></div>
+        </section>
+
+        <section>
+            <h2>Выберите главное блюдо</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-kind="fish">рыбное</button>
+                <button class="filter-btn" data-kind="meat">мясное</button>
+                <button class="filter-btn" data-kind="veg">вегетарианское</button>
+            </div>
+            <div class="dishes-grid"></div>
+        </section>
+
+        <section>
+            <h2>Выберите салат или стартер</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-kind="fish">рыбный</button>
+                <button class="filter-btn" data-kind="meat">мясной</button>
+                <button class="filter-btn" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes-grid"></div>
+        </section>
+
+        <section>
+            <h2>Выберите напиток</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-kind="cold">холодный</button>
+                <button class="filter-btn" data-kind="hot">горячий</button>
+            </div>
+            <div class="dishes-grid"></div>
+        </section>
+
+        <section>
+            <h2>Выберите десерт</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn" data-kind="small">маленькая порция</button>
+                <button class="filter-btn" data-kind="medium">средняя порция</button>
+                <button class="filter-btn" data-kind="large">большая порция</button>
+            </div>
+            <div class="dishes-grid"></div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <h2>Контакты</h2>
+        <p>Телефон: <a href="tel:+79787010404">+7 (978) 701-04-04</a></p>
+        <p>Адрес: г. Саки, с. Орехово, Магистральная ул., 5В</p>
+        <p>Время работы: Пн-Пт 9:00 - 22:00, Сб-Вс 10:00 - 21:00</p>
+        <p>© 2025 Drive Burger. Все права защищены.</p>
+    </footer>
+
+    <script src="assets/js/dishes.js"></script>
+    <script src="assets/js/menu-display.js"></script>
+    <script src="assets/js/filter.js"></script>
+    <script src="assets/js/checkout-panel.js"></script>
+    <script src="assets/js/order-selection.js"></script>
+</body>
+</html>

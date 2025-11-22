@@ -1,0 +1,380 @@
+#orders-section {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+#orders-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.loading-message,
+.empty-message,
+.error-message {
+    text-align: center;
+    font-size: 1.1em;
+    color: #666;
+    padding: 40px 20px;
+}
+
+.error-message {
+    color: #ff4444;
+}
+
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.orders-table thead {
+    background-color: #ff6600;
+    color: white;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.orders-table th {
+    font-weight: 700;
+}
+
+.orders-table td {
+    color: #333;
+}
+
+.orders-table tbody tr:hover {
+    background-color: #fff3e6;
+}
+
+.orders-table .order-number {
+    text-align: center;
+    font-weight: 500;
+}
+
+.orders-table .order-composition {
+    max-width: 300px;
+}
+
+.orders-table .order-price {
+    font-weight: 700;
+    color: #ff6600;
+}
+
+.orders-table .order-actions {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px 8px;
+    margin: 0 3px;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.action-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.action-btn.view {
+    color: #4CAF50;
+}
+
+.action-btn.edit {
+    color: #2196F3;
+}
+
+.action-btn.delete {
+    color: #f44336;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal.active {
+    display: block;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5em;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.modal-close:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.order-info-group {
+    margin-bottom: 15px;
+}
+
+.order-info-group label {
+    display: block;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.order-info-group p,
+.order-info-group .info-value {
+    color: #555;
+    margin: 0;
+    padding: 8px 0;
+}
+
+.order-composition-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.order-composition-list li {
+    padding: 5px 0;
+    color: #555;
+}
+
+.order-total-price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #ff6600;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="email"],
+.modal-body input[type="tel"],
+.modal-body input[type="time"],
+.modal-body select,
+.modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.modal-body textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding-top: 15px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.modal-btn {
+    padding: 10px 25px;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-btn.primary {
+    background-color: #ff6600;
+    color: white;
+}
+
+.modal-btn.primary:hover {
+    background-color: #e55a00;
+}
+
+.modal-btn.danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal-btn.danger:hover {
+    background-color: #d32f2f;
+}
+
+.modal-btn.secondary {
+    background-color: #f1eee9;
+    color: #333;
+}
+
+.modal-btn.secondary:hover {
+    background-color: #e0ddd8;
+}
+
+.delete-confirmation {
+    text-align: center;
+    padding: 20px;
+}
+
+.delete-confirmation p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.notification-popup {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 2000;
+    min-width: 300px;
+}
+
+.notification-popup.active {
+    display: block;
+    animation: slideIn 0.3s ease;
+}
+
+.notification-popup.success {
+    border-left: 4px solid #4CAF50;
+}
+
+.notification-popup.error {
+    border-left: 4px solid #f44336;
+}
+
+.notification-popup p {
+    margin: 0;
+    color: #333;
+    font-size: 1em;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .orders-table {
+        font-size: 0.9em;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 800px) {
+    .orders-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .modal {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    #orders-section {
+        padding: 20px;
+    }
+
+    .orders-table {
+        font-size: 0.85em;
+    }
+
+    .orders-table th,
+    .orders-table td {
+        padding: 8px;
+    }
+
+    .modal-footer {
+        flex-direction: column;
+    }
+
+    .modal-btn {
+        width: 100%;
+    }
+
+    .notification-popup {
+        right: 10px;
+        left: 10px;
+        min-width: auto;
+    }
+}
